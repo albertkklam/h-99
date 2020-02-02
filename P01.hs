@@ -1,3 +1,6 @@
 -- Find the last element of a list.
 
-myLast x = last x
+myLast :: [a] -> a
+myLast [] = error "Cannot call last on empty list."
+myLast [x] = x
+myLast (_:xs) = myLast xs
